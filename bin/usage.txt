@@ -1,14 +1,14 @@
 -----------------------
- REPLACE_PROJECT_NAME
+ twitter-pic-downloader
 -----------------------
 
 Usage:
-  REPLACE_PROJECT_NAME <TODO_ARGUMENT>... [--no-color] [-v]...
-  REPLACE_PROJECT_NAME -h | --help
-  REPLACE_PROJECT_NAME --version
+  twitter-pic-downloader <track-words>... [--no-color] [-v]...
+  twitter-pic-downloader -h | --help
+  twitter-pic-downloader --version
 
 Arguments:
-  TODO_ARGUMENT            Full path of azk binary/link [default: azk].
+  track-words            Full path of azk binary/link [default: azk].
 
 Options:
   --help, -h              Show this help.
@@ -17,5 +17,5 @@ Options:
   --verbose, -v           Sets the level of detail - multiple supported (-vv)
 
 Examples:
-  $ REPLACE_PROJECT_NAME          # REPLACE_TODO_BIN_DESCRIPTION
+  $ twitter-pic-downloader          # Download images
 
