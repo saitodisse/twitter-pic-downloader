@@ -3,21 +3,35 @@
 -----------------------
 
 Usage:
-  twitter-pic-downloader <track-words>... [--save=<destination>] [--no-color] [-v]...
+  twitter-pic-downloader <track>... --save=<destination> [--lang=<lang>... --show-all] [--no-color] [-v]...
   twitter-pic-downloader -h | --help
   twitter-pic-downloader --version
 
 Arguments:
-  <track-words>              Words to track
+  <track>                    Words to track
   <destination>              Destination folder to save images
 
 Options:
+  --lang=<lang>..., -l       Set languages to track
   --save=<destination>, -s   Save result to <destination> path
+  --show-all                 Output all tweets tracked
   --help, -h                 Show this help.
   --version, -V              Show version.
   --no-color                 Remove colors from output
   --verbose, -v              Sets the level of detail - multiple supported (-vv)
 
 Examples:
-  $ twitter-pic-downloader "#photo" /tmp   # Download tweets with #photo tag to /tmp folder
+
+    # Filter tweets: #photo
+    # Save to images to `/tmp` folder
+
+  $ twitter-pic-downloader "#photo" --save /tmp
+
+
+    # Filter tweets: foto
+    # Save to images to `/tmp` folder
+    # Output partial tweets even without images
+    # Filter language: pt
+
+  $ twitter-pic-downloader foto --save /tmp --show-all --lang pt
 

@@ -40,7 +40,15 @@ FIREBASE_URL=https://__XXX__.firebaseio.com
 Track "photo" and save to "/tmp" folder
 
 ```sh
-$ twitter-pic-downloader photo -s /tmp
+# Filter tweets: #photo
+# Save to images to `/tmp` folder
+$ twitter-pic-downloader "#photo" --save /tmp
+
+# Filter tweets: foto
+# Save to images to `/tmp` folder
+# Output partial tweets even without images
+# Filter language: pt
+$ twitter-pic-downloader foto --save /tmp --show-all --lang pt
 ```
 
 ----------

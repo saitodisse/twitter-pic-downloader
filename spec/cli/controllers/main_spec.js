@@ -9,24 +9,24 @@ describe('controller main:', () => {
   });
   const getDocoptResult = (argv) => cli._cli.docopt({ exit: false, argv });
 
-  it('should track-words one word', () => {
+  it('should track one word', () => {
     const docoptResult = getDocoptResult(['banana']);
-    h.expect(docoptResult['<track-words>']).to.deep.equal(['banana']);
+    h.expect(docoptResult['<track>']).to.deep.equal(['banana']);
   });
 
-  it('should track-words two words', () => {
+  it('should track two words', () => {
     const docoptResult = getDocoptResult(['banana', 'pizza']);
-    h.expect(docoptResult['<track-words>']).to.deep.equal(['banana', 'pizza']);
+    h.expect(docoptResult['<track>']).to.deep.equal(['banana', 'pizza']);
   });
 
-  it('should track-words one "two words"', () => {
+  it('should track one "two words"', () => {
     const docoptResult = getDocoptResult(['banana pizza']);
-    h.expect(docoptResult['<track-words>']).to.deep.equal(['banana pizza']);
+    h.expect(docoptResult['<track>']).to.deep.equal(['banana pizza']);
   });
 
   it('should `--save /tmp` be understood', () => {
     const docoptResult = getDocoptResult(['banana', '--save', '/tmp']);
-    h.expect(docoptResult['<track-words>']).to.deep.equal(['banana']);
+    h.expect(docoptResult['<track>']).to.deep.equal(['banana']);
     h.expect(docoptResult['--save']).to.deep.equal('/tmp');
   });
 });

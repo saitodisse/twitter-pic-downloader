@@ -2,7 +2,6 @@ import merge from 'lodash.merge';
 import dotenv from 'dotenv';
 import request from 'superagent';
 import fs from 'fs';
-import url from 'url';
 import path from 'path';
 
 class Saver {
@@ -22,7 +21,7 @@ class Saver {
           if (error) {
             throw error;
           }
-          console.error(fullPath, 'saved.');
+          console.error(`   > saved: ${fullPath}'`);
         });
       });
   }
