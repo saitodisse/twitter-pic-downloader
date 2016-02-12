@@ -13,16 +13,8 @@ class MainCliRouter {
   }
 
   run(args) {
-    const result = this._cli.run({ argv: args });
-    if (result.hasOwnProperty('_promise0')) {
-      return result
-      .then((promiseResult) => process.exit(promiseResult))
-      .catch((err) => {
-        console.error(err.toString());
-        process.exit(1);
-      });
-    }
-    console.error(result);
+    const result$ = this._cli.run({ argv: args });
+    result$.forEach((result) => result && console.error(result));
   }
 }
 

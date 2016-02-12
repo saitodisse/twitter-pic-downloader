@@ -3,19 +3,21 @@
 -----------------------
 
 Usage:
-  twitter-pic-downloader <track-words>... [--no-color] [-v]...
+  twitter-pic-downloader <track-words>... [--save=<destination>] [--no-color] [-v]...
   twitter-pic-downloader -h | --help
   twitter-pic-downloader --version
 
 Arguments:
-  track-words            Full path of azk binary/link [default: azk].
+  <track-words>              Words to track
+  <destination>              Destination folder to save images
 
 Options:
-  --help, -h              Show this help.
-  --version, -V           Show version.
-  --no-color              Remove colors from output
-  --verbose, -v           Sets the level of detail - multiple supported (-vv)
+  --save=<destination>, -s   Save result to <destination> path
+  --help, -h                 Show this help.
+  --version, -V              Show version.
+  --no-color                 Remove colors from output
+  --verbose, -v              Sets the level of detail - multiple supported (-vv)
 
 Examples:
-  $ twitter-pic-downloader          # Download images
+  $ twitter-pic-downloader "#photo" /tmp   # Download tweets with #photo tag to /tmp folder
 

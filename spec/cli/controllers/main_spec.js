@@ -23,4 +23,10 @@ describe('controller main:', () => {
     const docoptResult = getDocoptResult(['banana pizza']);
     h.expect(docoptResult['<track-words>']).to.deep.equal(['banana pizza']);
   });
+
+  it('should `--save /tmp` be understood', () => {
+    const docoptResult = getDocoptResult(['banana', '--save', '/tmp']);
+    h.expect(docoptResult['<track-words>']).to.deep.equal(['banana']);
+    h.expect(docoptResult['--save']).to.deep.equal('/tmp');
+  });
 });

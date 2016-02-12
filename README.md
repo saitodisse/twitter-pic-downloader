@@ -12,8 +12,7 @@ npm install twitter-pic-downloader -g
 ### Run
 
 ```sh
-twitter-pic-downloader             # Downloads images from some twitter stream
-
+$ twitter-pic-downloader photo -s /tmp  # Track "photo" and save to "/tmp" folder
 ```
 
 ### Test and run locally

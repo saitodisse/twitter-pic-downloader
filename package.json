@@ -1,6 +1,6 @@
 {
   "name": "twitter-pic-downloader",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Downloads images from some twitter stream",
   "main": "index.js",
   "bin": {
@@ -32,11 +32,14 @@
     "gulp-eslint": "^1.1.1"
   },
   "dependencies": {
-    "bluebird": "^3.1.1",
     "chalk": "^1.1.1",
     "cli-router": "^0.3.7",
-    "dotenv": "^1.2.0",
+    "dotenv": "^2.0.0",
+    "lodash": "^4.3.0",
     "lodash.merge": "^4.0.1",
-    "source-map-support": "^0.4.0"
+    "rx": "^4.0.7",
+    "source-map-support": "^0.4.0",
+    "superagent": "^1.7.2",
+    "twitter-stream-cli": "^0.1.8"
   }
 }
