@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs"
+    },
+    "exclude": [
+        ".git",
+        "node_modules",
+        "bower_components"
+    ]
+}
