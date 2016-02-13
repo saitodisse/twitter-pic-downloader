@@ -6,6 +6,7 @@
     "exclude": [
         ".git",
         "node_modules",
+        "lib",
         "bower_components"
     ]
 }

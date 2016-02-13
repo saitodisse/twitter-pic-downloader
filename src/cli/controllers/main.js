@@ -1,17 +1,18 @@
 import { CliController } from 'cli-router';
-import Rx from 'rx';
 import Main from '../../main';
 import Saver from '../../saver';
+const Rx = require('rx');
 
 class MainController extends CliController {
   index(params) {
     const main = new Main(params);
     const saver = new Saver(params);
 
+    // var combination = Rx.Observable.concat(main.run(), source2);
     main.run()
     .map((url) => {
-      saver.save(url, params.save);
-      return url;
+      return saver.save(url, params.save)
+      .subscribe((x) => console.log(x));
     })
     .subscribe();
 
